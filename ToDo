@@ -1,0 +1,16 @@
+gcc -c */*.c -Wall -Wextra -Werror
+rm *.o
+
+norminette */*.c
+
+be sure no #include nor main left
+
+git add .
+git commit -m "gl moi"
+gitls
+git push origin master
+
+
+
+
+NB/
