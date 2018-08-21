@@ -6,11 +6,11 @@
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 12:14:40 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/20 12:14:44 by staeter          ###   ########.fr       */
+/*   Updated: 2018/08/21 11:14:10 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_alpha(char *str)
+int		ft_str_is_alpha(char *str)
 {
 	if ((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z'))
 		return (ft_str_is_alpha(++str));

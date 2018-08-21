@@ -6,11 +6,11 @@
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 15:38:30 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/20 15:38:32 by staeter          ###   ########.fr       */
+/*   Updated: 2018/08/21 11:15:29 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	char *tmp;
 
@@ -24,5 +24,5 @@ char *ft_strcat(char *dest, char *src)
 		src++;
 	}
 	*tmp = 0;
-	return dest;
+	return (dest);
 }

@@ -6,11 +6,11 @@
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:45:45 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/20 10:45:48 by staeter          ###   ########.fr       */
+/*   Updated: 2018/08/21 11:12:23 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(char *s1, char *s2)
 {
 	if (*s1 == *s2 && *s1 != 0)
 		return (ft_strcmp(++s1, ++s2));

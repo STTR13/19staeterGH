@@ -22,5 +22,5 @@ char	*ft_strcpy(char *dest, char *src)
 		src++;
 	}
 	*dest = 0;
-	return tmp;
+	return (tmp);
 }

@@ -6,11 +6,11 @@
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 11:05:20 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/20 11:05:22 by staeter          ###   ########.fr       */
+/*   Updated: 2018/08/21 11:12:45 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strncmp(char *s1, char *s2, unsigned int n)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	if (n == 0)
 		return (0);

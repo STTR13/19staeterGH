@@ -6,11 +6,11 @@
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 15:28:14 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/20 15:28:16 by staeter          ###   ########.fr       */
+/*   Updated: 2018/08/21 11:15:14 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_printable(char *str)
+int		ft_str_is_printable(char *str)
 {
 	if (*str > 31 && *str != 127)
 		return (ft_str_is_printable(++str));

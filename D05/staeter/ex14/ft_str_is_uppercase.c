@@ -6,11 +6,11 @@
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 15:26:50 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/20 15:26:53 by staeter          ###   ########.fr       */
+/*   Updated: 2018/08/21 11:14:59 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_uppercase(char *str)
+int		ft_str_is_uppercase(char *str)
 {
 	if (*str >= 'A' && *str <= 'Z')
 		return (ft_str_is_uppercase(++str));

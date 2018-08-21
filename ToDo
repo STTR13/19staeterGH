@@ -6,7 +6,7 @@ norminette */*.c
 be sure no #include nor main left
 
 git add .
-git commit -m "gl moi"
+git commit -m "all day6"
 gitls
 git push origin master
 

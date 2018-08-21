@@ -6,11 +6,11 @@
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 15:25:03 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/20 15:25:05 by staeter          ###   ########.fr       */
+/*   Updated: 2018/08/21 11:14:43 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_lowercase(char *str)
+int		ft_str_is_lowercase(char *str)
 {
 	if (*str >= 'a' && *str <= 'z')
 		return (ft_str_is_lowercase(++str));

@@ -6,11 +6,11 @@
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 15:37:43 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/20 15:37:46 by staeter          ###   ########.fr       */
+/*   Updated: 2018/08/21 11:15:43 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strncat(char *dest, char *src, int nb)
+char	*ft_strncat(char *dest, char *src, int nb)
 {
 	char *tmp;
 
@@ -25,13 +25,5 @@ char *ft_strncat(char *dest, char *src, int nb)
 		nb--;
 	}
 	*tmp = 0;
-	return dest;
-}
-
-
-#include <stdio.h>
-int main() {
-	char str[] = "bfvusbl\0abcdef";
-	printf("%s\n", ft_strncat(str, "123456789", 6));
-	return 0;
+	return (dest);
 }
