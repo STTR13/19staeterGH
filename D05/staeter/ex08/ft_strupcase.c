@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/15 06:30:06 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/15 06:30:15 by staeter          ###   ########.fr       */
+/*   Created: 2018/08/20 11:13:19 by staeter           #+#    #+#             */
+/*   Updated: 2018/08/20 11:13:23 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char *ft_strupcase_recc(char *str)
 {
-	char *tmp;
+	if (*str == 0)
+		return str;
+	else if (*str <= 'z' && *str >= 'a')
+		*str += 'A' - 'a';
+	return ft_strupcase_recc(++str);
 
-	tmp = dest;
-	while (*src != 0)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = 0;
-	return tmp;
+}
+
+char *ft_strupcase(char *str)
+{
+	ft_strupcase_recc(str);
+	return str;
 }

@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/15 06:30:06 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/15 06:30:15 by staeter          ###   ########.fr       */
+/*   Created: 2018/08/20 10:45:45 by staeter           #+#    #+#             */
+/*   Updated: 2018/08/20 10:45:48 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int ft_strcmp(char *s1, char *s2)
 {
-	char *tmp;
-
-	tmp = dest;
-	while (*src != 0)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = 0;
-	return tmp;
+	if (*s1 == *s2 && *s1 != 0)
+		return (ft_strcmp(++s1, ++s2));
+	else if (*s1 == 0 && *s2 == 0)
+		return (0);
+	else
+		return (*s1 - *s2);
 }

@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/15 06:30:06 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/15 06:30:15 by staeter          ###   ########.fr       */
+/*   Created: 2018/08/20 15:26:50 by staeter           #+#    #+#             */
+/*   Updated: 2018/08/20 15:26:53 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int ft_str_is_uppercase(char *str)
 {
-	char *tmp;
-
-	tmp = dest;
-	while (*src != 0)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = 0;
-	return tmp;
+	if (*str >= 'A' && *str <= 'Z')
+		return (ft_str_is_uppercase(++str));
+	else if (*str == 0)
+		return (1);
+	else
+		return (0);
 }

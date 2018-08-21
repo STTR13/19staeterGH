@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/15 06:30:06 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/15 06:30:15 by staeter          ###   ########.fr       */
+/*   Created: 2018/08/20 09:51:11 by staeter           #+#    #+#             */
+/*   Updated: 2018/08/20 09:51:15 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	char *tmp;
 
 	tmp = dest;
-	while (*src != 0)
+	while (*src != 0 && n > 0)
 	{
 		*dest = *src;
 		dest++;
 		src++;
+		n--;
 	}
-	*dest = 0;
+	while (*dest != '\0')
+	{
+		*dest = '\0';
+		dest++;
+	}
 	return tmp;
 }

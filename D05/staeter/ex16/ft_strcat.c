@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/15 06:30:06 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/15 06:30:15 by staeter          ###   ########.fr       */
+/*   Created: 2018/08/20 15:38:30 by staeter           #+#    #+#             */
+/*   Updated: 2018/08/20 15:38:32 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char *ft_strcat(char *dest, char *src)
 {
 	char *tmp;
 
 	tmp = dest;
+	while (*tmp != 0)
+		tmp++;
 	while (*src != 0)
 	{
-		*dest = *src;
-		dest++;
+		*tmp = *src;
+		tmp++;
 		src++;
 	}
-	*dest = 0;
-	return tmp;
+	*tmp = 0;
+	return dest;
 }

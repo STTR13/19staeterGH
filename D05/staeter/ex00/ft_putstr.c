@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: staeter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/15 06:30:06 by staeter           #+#    #+#             */
-/*   Updated: 2018/08/15 06:30:15 by staeter          ###   ########.fr       */
+/*   Created: 2018/08/13 10:26:35 by staeter           #+#    #+#             */
+/*   Updated: 2018/08/13 10:38:01 by staeter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
-{
-	char *tmp;
+int		ft_putchar(char c);
 
-	tmp = dest;
-	while (*src != 0)
+void	ft_putstr(char *str)
+{
+	if (*str != '\0')
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		ft_putchar(*str);
+		ft_putstr(++str);
 	}
-	*dest = 0;
-	return tmp;
 }
