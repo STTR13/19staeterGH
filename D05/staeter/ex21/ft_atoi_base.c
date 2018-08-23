@@ -49,7 +49,7 @@ int		get_valid_digit(char c, char *base)
 	int count;
 
 	count = 0;
-	if (c == '-' || c == '+' || ifspace(c))
+	if (c == '-' || c == '+')
 		return (-2);
 	while (*base)
 	{
@@ -94,14 +94,14 @@ int		ft_atoi_base(char *str, char *base)
 	base_size = get_valid_base(base);
 	if (base_size)
 	{
+		while (ifspace(str[i]))
+			i++;
 		if (str[i] == '-' || str[i] == '+')
 		{
 			neg = (str[i] == '-') ? -1 : 1;
 			i++;
 		}
-		while (ifspace(str[i]))
-			i++;
 		neg *= take_number(&str[i], base, base_size);
 	}
-	return (neg);
+	return ((base_size) ? neg : 0);
 }
